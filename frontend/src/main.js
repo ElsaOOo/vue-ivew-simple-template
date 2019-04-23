@@ -1,9 +1,14 @@
 import Vue from 'vue';
+import iView from 'iview';
+import 'iview/dist/styles/iview.css';
 import App from './App.vue';
 import router from './router';
 import store from './store';
+import './assets/style/common.less';
 
 Vue.config.productionTip = false;
+
+Vue.use(iView);
 
 new Vue({
   router,
