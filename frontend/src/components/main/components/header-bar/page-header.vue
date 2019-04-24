@@ -1,18 +1,24 @@
 <template>
   <Header class="compo">
     <div class="header-bar">
-      <user></user>
+      <user :userAvatar="userAvatar"></user>
     </div>
   </Header>
 </template>
 
 <script>
 import User from '../user';
+import userAvatar from '@/assets/image/avatar.svg';
 
 export default {
   name: 'PageHeader',
   components: {
     User,
+  },
+  data() {
+    return {
+      userAvatar,
+    };
   },
 };
 </script>
