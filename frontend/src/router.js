@@ -11,7 +11,23 @@ export default new Router({
       path: '/',
       name: 'home',
       component: () => import('@/components/main'),
-      children: [],
+      children: [
+        {
+          path: '/home',
+          name: '_home',
+          component: () => import('@/views/Home.vue'),
+        },
+      ],
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('@/views/Login.vue'),
+    },
+    {
+      path: '*',
+      name: '404',
+      component: () => import('@/views/NotFound.vue'),
     },
   ],
 });
