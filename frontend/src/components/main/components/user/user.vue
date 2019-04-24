@@ -26,7 +26,17 @@ export default {
     };
   },
   methods: {
-    handleClick() {},
+    logout() {},
+
+    handleClick(name) {
+      switch (name) {
+        case 'logout':
+          this.logout();
+          break;
+        default:
+          break;
+      }
+    },
   },
 };
 </script>

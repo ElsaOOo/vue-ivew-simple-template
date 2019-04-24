@@ -26,7 +26,7 @@ export default {
 <style lang="less" scoped>
 .compo {
   background: #fff;
-  box-shadow: 0px 2px 0 #dddddd4d;
+  border-bottom: solid 1px #dddddd4d;
   .header-bar {
     display: flex;
     justify-content: flex-end;
