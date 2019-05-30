@@ -1,13 +1,11 @@
 <template>
- <Layout style="height: 100%" class="main">
-   <page-header></page-header>
-   <div class="content-wrapper fl">
-     <page-sider></page-sider>
-      <div class="content-area">
-        <router-view/>
-      </div>
-   </div>
- </Layout>
+  <div style="height: 100%" class="content-wrapper">
+    <page-sider></page-sider>
+    <Layout class="content-area">
+      <page-header></page-header>
+      <router-view/>
+    </Layout>
+  </div>
 </template>
 
 <script>
@@ -29,11 +27,10 @@ export default {
 </script>
 <style lang="less" scoped>
 .content-wrapper {
-  height: calc(100vh - 64px);
+  display: flex;
   .content-area {
     height: 100%;
-    width: 100%;
-    padding: 18px;
+    flex: 1;
   }
 }
 

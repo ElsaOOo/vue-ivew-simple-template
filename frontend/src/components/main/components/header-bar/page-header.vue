@@ -27,6 +27,7 @@ export default {
 .compo {
   background: #fff;
   border-bottom: solid 1px #dddddd4d;
+  padding: 0;
   .header-bar {
     display: flex;
     justify-content: flex-end;

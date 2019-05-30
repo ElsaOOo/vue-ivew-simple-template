@@ -31,7 +31,5 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-.sider {
-  min-height: calc(100vh - 64px);
-}
+
 </style>
