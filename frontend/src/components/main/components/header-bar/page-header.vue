@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     collapseChange() {
-      this.isCollapsed = this.isCollapsed;
+      this.isCollapsed = !this.isCollapsed;
       EventBus.$emit('collapseChange', this.isCollapsed);
     },
   },
