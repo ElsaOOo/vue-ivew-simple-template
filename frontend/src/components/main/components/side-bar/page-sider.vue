@@ -4,7 +4,7 @@
   collapsible
   accordion
   :collapsed-width="78"
-  :style="{position: 'fixed', height: '100vh', left: 0, overflow: 'auto'}"
+  :style="{height: '100vh', overflow: 'auto'}"
   v-model="isCollapsed">
    <slot></slot>
    <Menu theme="light" width="auto" v-show="!isCollapsed">

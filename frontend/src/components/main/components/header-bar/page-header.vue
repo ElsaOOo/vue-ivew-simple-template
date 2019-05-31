@@ -29,6 +29,16 @@ export default {
       EventBus.$emit('collapseChange', this.isCollapsed);
     },
   },
+  mounted() {
+    window.addEventListener('resize', () => {
+      if (window.innerWidth <= 992 && window.innerWidth >= 768) {
+        EventBus.$emit('collapseChange', true);
+      }
+      if (window.innerWidth >= 1200) {
+        EventBus.$emit('collapseChange', false);
+      }
+    });
+  },
 };
 </script>
 

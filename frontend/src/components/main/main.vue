@@ -8,7 +8,9 @@
     </page-sider>
     <Layout class="content-area">
       <page-header></page-header>
-      <router-view/>
+      <div class="content">
+        <router-view/>
+      </div>
     </Layout>
   </div>
 </template>
@@ -80,7 +82,9 @@ export default {
   .content-area {
     height: 100%;
     flex: 1;
-    margin-left: 200px;
+    .content {
+      padding: 10px 15px;
+    }
   }
 }
 .logo {

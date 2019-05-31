@@ -10,12 +10,13 @@ export default new Router({
     {
       path: '/',
       name: 'home',
+      redirect: '/home',
       component: () => import('@/components/main'),
       children: [
         {
           path: '/home',
           name: '_home',
-          component: () => import('@/views/Home.vue'),
+          component: () => import('@/views/home/Home.vue'),
         },
       ],
     },
