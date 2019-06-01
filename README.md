@@ -7,5 +7,5 @@
 - css 预处理器默认是less
 - style-resources-loader 这个包可以配置全局使用的less文件，省去了用@import在.vue文件中引入的步骤
 
-![Alt text](/static/vue-iview-home.png "主页")
-![Alt text](/static/vue-iview-login.png "登录页")
+![Alt text](./static/vue-iview-home.png "主页")
+![Alt text](./static/vue-iview-login.png "登录页")
