@@ -1,5 +1,5 @@
 <template>
-  <Header class="compo">
+  <Header class="compo" :class="{'is-collapsed': isCollapsed}">
     <img class="menu-img" src="@/assets/svg/menu.svg" alt="menu.icon" @click="collapseChange">
     <div class="header-bar">
       <user :userAvatar="userAvatar"></user>
@@ -32,9 +32,11 @@ export default {
   mounted() {
     window.addEventListener('resize', () => {
       if (window.innerWidth <= 992 && window.innerWidth >= 768) {
+        this.isCollapsed = true;
         EventBus.$emit('collapseChange', true);
       }
       if (window.innerWidth >= 1200) {
+        this.isCollapsed = false;
         EventBus.$emit('collapseChange', false);
       }
     });
@@ -50,6 +52,13 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  width: calc(100% - 200px);
+  transition: all 0.2s ease;
+  z-index: 999;
+  &.is-collapsed {
+    width: calc(100% - 78px);
+  }
   .menu-img {
     margin: 0 10px;
     height: 32px;

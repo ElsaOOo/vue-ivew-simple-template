@@ -8,14 +8,22 @@
     </Row>
 
     <!-- map -->
-    <div class="map-data">
-      <div class="map-wrapper">
+    <Row type="flex" class="map-data">
+      <Col :sm="24" :md="16" :lg="16" :xl="16" class="map-wrapper">
         <ve-map :data="chartData"></ve-map>
-      </div>
-      <div class="figure">
+      </Col>
+      <Col :sm="24" :md="8" :lg="8" :xl="8" class="map-figure">
         <progress-item></progress-item>
-      </div>
-    </div>
+        <progress-item></progress-item>
+        <progress-item></progress-item>
+        <progress-item></progress-item>
+      </Col>
+    </Row>
+
+    <Row type="flex">
+      <Col :sm="24" :md="12" :lg="12" :xl="12">part1</Col>
+      <Col :sm="24" :md="12" :lg="12" :xl="12">part2</Col>
+    </Row>
   </div>
 </template>
 
@@ -56,5 +64,15 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
+.map-data {
+  margin: 40px 0;
+  .map-wrapper {
+    padding: 0 10px;
+  }
+  .map-figure {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 0 20px;
+  }
+}
 </style>

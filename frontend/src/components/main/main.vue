@@ -82,8 +82,19 @@ export default {
   .content-area {
     height: 100%;
     flex: 1;
+    position: relative;
     .content {
       padding: 10px 15px;
+      margin-top: 64px;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        width: 5px;
+        background-color: #F5F5F5;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #000000;
+        border: 1px solid #555555;
+      }
     }
   }
 }

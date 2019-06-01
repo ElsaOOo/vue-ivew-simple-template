@@ -26,7 +26,9 @@ export default {
     };
   },
   methods: {
-    logout() {},
+    logout() {
+      this.$router.push('/login');
+    },
 
     handleClick(name) {
       switch (name) {
@@ -42,7 +44,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .user-avatar-dropdown {
-
+  margin-right: 10px;
 }
 
 </style>
